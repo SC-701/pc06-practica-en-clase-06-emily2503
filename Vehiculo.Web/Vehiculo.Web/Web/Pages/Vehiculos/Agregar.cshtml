@@ -8,18 +8,14 @@
         <form method="post">
             <div class=" form-group">
                 <label for="marcas">Marca</label>
-                <select asp-for="marcaseleccionada"
-                        class="form-select"
-                        asp-items="Model.marcas"
-                        id="marcas"
-                        onchange="fetchModelos()">
+                <select asp-for="marcaseleccionada" class="form-select" asp-items="Model.marcas" id="marcas">
                     <option value="">Seleccione una marca</option>
                 </select>
             </div>
             <div class=" form-group">
                 <label for="marcas">Modelo</label>
                 <select asp-for="vehiculo.IdModelo" class="form-select" asp-items="Model.modelos" id="modelos">
-                    <option value="">Seleccione un modelo</option>
+                    <option value="">Seleccione una marca</option>
                 </select>
             </div>
             <div class=" form-group">
@@ -67,7 +63,7 @@
         const marcaId = document.getElementById("marcas").value;
         if(!marcaId) {return; }
         try {
-        const respuesta = await fetch(`?handler=ObtenerModelos&marcaId=${marcaId}`)
+        const respuesta= await fetch('?handler=ObtenerModelos&marcaId=${marcaId}')
         const modelos= await respuesta.json();
         const modelosSelect = document.getElementById("modelos");
         modelosSelect.innerHTML = '<option value="">Seleccione un modelo</option>';

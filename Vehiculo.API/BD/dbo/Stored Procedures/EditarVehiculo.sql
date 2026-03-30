@@ -16,7 +16,7 @@ CREATE PROCEDURE EditarVehiculo
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
+	-- interfering with SELECT statements. comentrio agregado
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here

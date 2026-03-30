@@ -20,8 +20,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	-- prueba
-	--segunda
 	BEGIN TRANSACTION
 		INSERT INTO [dbo].[Vehiculo]
 			   ([Id]
